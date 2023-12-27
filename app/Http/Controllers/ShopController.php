@@ -46,8 +46,7 @@ class ShopController extends Controller
 
         $validator = Validator::make($request->all(), $rules, $messages);
 
-        if ( !$validator->fails() )
-        {
+        if (!$validator->fails()) {
             $shop = Shop::create([
                 'name' => $request->get('name'),
                 'address' => $request->get('address'),
@@ -61,7 +60,7 @@ class ShopController extends Controller
 
 
 
-    public function edit( $id )
+    public function edit($id)
     {
         $shop = Shop::find($id);
 
@@ -96,8 +95,7 @@ class ShopController extends Controller
 
         $validator = Validator::make($request->all(), $rules, $messages);
 
-        if ( !$validator->fails() )
-        {
+        if (!$validator->fails()) {
             $shop = Shop::find($request->get('id'));
             $shop->name = $request->get('name');
             $shop->address = $request->get('address');
@@ -122,8 +120,7 @@ class ShopController extends Controller
 
         $validator = Validator::make($request->all(), $rules, $messages);
 
-        if ( !$validator->fails() )
-        {
+        if (!$validator->fails()) {
             $shop = Shop::find($request->get('id'));
 
             $shop->delete();
@@ -138,7 +135,7 @@ class ShopController extends Controller
         return view('shop.restore', compact('shops'));
     }
 
-    public function restore( Request $request )
+    public function restore(Request $request)
     {
         $rules = [
             'id' => 'required|exists:shops,id',
@@ -151,10 +148,9 @@ class ShopController extends Controller
 
         $validator = Validator::make($request->all(), $rules, $messages);
 
-        if ( !$validator->fails() )
-        {
+        if (!$validator->fails()) {
             $shop = Shop::onlyTrashed()->where('id', $request->get('id'))
-                            ->restore();
+                ->restore();
         }
 
         return response()->json($validator->messages(), 200);

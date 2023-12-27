@@ -45,8 +45,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-//rutas Laravel 7
-
+//rutas Laravel 9
 
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->group(function () {
@@ -84,7 +83,6 @@ Route::middleware('auth')->group(function () {
         Route::post('shop/restore', [ShopController::class, 'restore'])->name('shop.restore')
             ->middleware('permission:restore_store');
 
-
         // TODO: Rutas módulo Categoría
         // Index: Muestra el listado de categorias
         Route::get('categorías', [CategoryController::class, 'index'])->name('category.index')
@@ -95,10 +93,6 @@ Route::middleware('auth')->group(function () {
             ->middleware('permission:update_store');
         Route::post('category/destroy', [CategoryController::class, 'destroy'])->name('category.destroy')
             ->middleware('permission:destroy_store');
-
-
-
-
 
         //Todo: Rutas modulo Direcciones
         Route::get('direcciones', [CustomerAddressController::class, 'index'])->name('address.index')
@@ -196,7 +190,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/delete/images/{idImage}', [ProductController::class, 'deleteImages'])
             ->middleware('permission:edit_store');
 
-
         // TODO: CUSTOMER
 
         // TODO: Rutas módulo Clientes
@@ -293,7 +286,6 @@ Route::get('/contacto', [MailController::class, 'showContact'])
     ->name('show.contact');
 
 
-
 // Customer
 
 // Customer_address
@@ -315,8 +307,6 @@ Route::get('/contacto', [MailController::class, 'showContact'])
 // Banner
 // Product_top
 // Information
-
-
 
 
 require __DIR__ . '/auth.php';
