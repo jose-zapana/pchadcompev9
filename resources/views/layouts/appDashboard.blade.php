@@ -38,8 +38,6 @@
 
     @include('layouts.theme.scripts')
 
-    @yield('scripts')
-
 </body>
 
 </html>

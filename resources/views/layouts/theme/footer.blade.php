@@ -2,7 +2,7 @@
             	<div class="footer-inner">
             		<div class="footer-content">
             			<span class="bigger-120">
-            				<span class="blue bolder">Sistema LWPOS</span>
+            				<span class="blue bolder">Sistema Web</span>
             				versión 1.0 - by José Zapana &copy; 2023 - 2024
             			</span>
 
