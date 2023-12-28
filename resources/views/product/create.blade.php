@@ -2,7 +2,6 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('intranet/assets/css/select2.min.css') }}" />
-    <script src="{{ asset('js/product/create.js') }}"></script>
 @endsection
 
 @section('openModProduct')
@@ -36,7 +35,6 @@
             </form>
         </div><!-- /.nav-search -->
     </div>
-
 @endsection
 
 @section('content')
@@ -143,21 +141,13 @@
                                                     <input type="text" name="specifications[]" class="form-control" />
                                                 </div>
                                             </div>
-
                                             <div class="col-sm-2">
-                                                <!-- <button type="button" id="btnNew" class="btn btn-success btn-xs"><i class="ace-icon fa fa-plus icon-animated-hand-pointer with"></i>Agregar</button> -->
-                                                <button type="button" onclick="crearItems()" class="btn btn-success btn-xs"><i class="ace-icon fa fa-plus icon-animated-hand-pointer with"></i>Add</button>
+                                                <button type="button" id="btnNew" class="btn btn-success btn-xs"><i class="ace-icon fa fa-plus icon-animated-hand-pointer with"></i>Agregar</button>
                                             </div>
-
-
-
                                         </div>
                                         <div id="body-items"></div>
                                         <template id="template-item">
- 
-                                            <div id="elementos">
-                                                <div class="row opcion">
-                                                <div class="form-group">
+                                            <div class="form-group">
                                                 <div class="col-sm-5">
                                                     <div class="col-sm-12">
                                                         <input type="text" name="infos[]" class="form-control" />
@@ -173,13 +163,7 @@
                                                     <button type="button" data-delete class="btn btn-danger btn-xs"><i class="ace-icon fa fa-trash icon-animated-hand-pointer with"></i></button>
                                                 </div>
                                             </div>
-                                            </div>
-                                        </div>
-
-
                                         </template>
-
-
 
                                     </div>
                                 </div>
@@ -220,9 +204,6 @@
                                                 <button type="button" id="btnImage" class="btn btn-success btn-xs"><i class="ace-icon fa fa-plus icon-animated-hand-pointer with"></i>Agregar</button>
                                             </div>
                                         </div>
-                                          
-
-
                                         <div id="body-images"></div>
                                         <template id="template-image">
                                             <div class="form-group">
@@ -249,7 +230,6 @@
 
                         </div>
                     </div>
-
 
                     <br><br><br><br><br>
                     <hr />
@@ -376,15 +356,6 @@
                 //
             });
         })
-
-        
     </script>
-        <script>
-        function crearItems()
-        {
-           $('.opcion:first').clone().appendTo('#elementos');
-        }
-    </script>
-    
     <script src="{{ asset('js/product/create.js') }}"></script>
 @endsection
