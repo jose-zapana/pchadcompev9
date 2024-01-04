@@ -201,10 +201,10 @@
 
                             <div class="content">
                                 <h1 class="h4" data-name>HP Chromebook 11</h1>
-                                <p class="price" data-price>$199.99</p>
+
+                                      <p class="price" data-price>$199.99</p>
                                 <label data-category>Laptops</label>
 
-                                <a href="#" data-detail class="btn btn-link"> Details</a>
                                 <button data-product="" data-url="" class="btn btn-primary btn-rounded btn-sm"> <i class="ion-bag"></i> Add to cart</button>
                             </div>
                         </div>
@@ -241,5 +241,6 @@
 @endsection
 
 @section('scripts')
+
     <script src="{{ asset('js/landing/catalog.js') }}"></script>
 @endsection
